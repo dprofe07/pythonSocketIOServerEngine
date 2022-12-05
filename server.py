@@ -97,7 +97,7 @@ class Server:
         self.sio.save_session(sid, session)
 
     def run(self):
-        eventlet.wsgi.server(eventlet.listen(('', 5000)), self.app)
+        eventlet.wsgi.server(eventlet.listen((self.host, self.port)), self.app)
 
     @staticmethod
     def sio_event(class_name, event):

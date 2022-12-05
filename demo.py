@@ -78,6 +78,6 @@ class MyServer(Server):
         self.emit('start_game', {})
 
 
-srv = MyServer('0.0.0.0', 5000)
+srv = MyServer('0.0.0.0', 8007)
 
 srv.run()
